@@ -154,12 +154,9 @@ app.UseExceptionHandler(errorApp =>
 
 app.UseCors("AllowFrontend");
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
+app.UseSwagger();
+app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 app.UseAuthentication(); // <-- Must come before UseAuthorization
